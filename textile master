@@ -1,0 +1,868 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#123b5d">
+<title>Textile Master</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #eef5f9;
+  color: #183044;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(120deg, #123b5d, #176b9a);
+  color: white;
+  padding: 25px 15px;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.tagline {
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 12px;
+}
+
+nav {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+nav button {
+  border: none;
+  border-radius: 20px;
+  padding: 10px 14px;
+  background: #dcebf4;
+  color: #123b5d;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+nav button.active {
+  background: #123b5d;
+  color: white;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.card {
+  background: white;
+  border: 1px solid #d9e4eb;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 12px 0;
+}
+
+h1, h2, h3 {
+  color: #123b5d;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.tile {
+  background: white;
+  border: 1px solid #d9e4eb;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0 12px;
+  border: 1px solid #b8cbd7;
+  border-radius: 8px;
+}
+
+.action {
+  background: #176b9a;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+
+.result {
+  background: #e8f6ef;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #607789;
+}
+
+@media (max-width: 600px) {
+  .brand {
+    font-size: 24px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <div class="brand">Textile Master</div>
+    <div class="tagline">
+      Textile Engineering Learning Platform
+    </div>
+    <div class="tagline">
+      টেক্সটাইল শেখার সহজ মাধ্যম
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+<nav id="nav">
+  <button class="active" data-page="home">Home</button>
+  <button data-page="basics">Textile Basics</button>
+  <button data-page="woven">Woven A-Z</button>
+  <button data-page="wet">Wet Processing</button>
+  <button data-page="dyeing">Dyeing</button>
+  <button data-page="finishing">Finishing</button>
+  <button data-page="calculation">Calculation</button>
+  <button data-page="mcq">MCQ Test</button>
+</nav>
+
+</div>
+
+<main class="container">
+
+<section id="home" class="page active">
+
+<div class="card">
+  <h1>Welcome to Textile Master</h1>
+
+  <p>
+    টেক্সটাইল ইঞ্জিনিয়ারিংয়ের গুরুত্বপূর্ণ বিষয়গুলো
+    সহজ ভাষায় শিখুন।
+  </p>
+
+  <p>
+    Textile Basics, Woven Fabric, Wet Processing,
+    Dyeing, Finishing এবং Calculation।
+  </p>
+</div>
+
+<div class="grid">
+
+  <div class="tile">
+    <h3>Textile Basics</h3>
+    <p>Fiber, Yarn ও Fabric সম্পর্কে জানুন।</p>
+  </div>
+
+  <div class="tile">
+    <h3>Woven Fabric A-Z</h3>
+    <p>Warp, Weft, Weave ও Fabric Structure।</p>
+  </div>
+
+  <div class="tile">
+    <h3>Wet Processing</h3>
+    <p>Pretreatment থেকে Finishing পর্যন্ত।</p>
+  </div>
+
+  <div class="tile">
+    <h3>Dyeing</h3>
+    <p>Cotton ও Polyester Dyeing।</p>
+  </div>
+
+  <div class="tile">
+    <h3>Finishing</h3>
+    <p>Stenter, Dryer, Compactor ও Quality।</p>
+  </div>
+
+  <div class="tile">
+    <h3>Calculation</h3>
+    <p>Dye, Chemical ও Water Calculation।</p>
+  </div>
+
+</div>
+
+<div class="card">
+  <h2>আমাদের লক্ষ্য</h2>
+  <p>
+    শিক্ষার্থী ও নতুন টেক্সটাইল কর্মীদের
+    ব্যবহারিক ও তাত্ত্বিক জ্ঞান অর্জনে সহায়তা করা।
+  </p>
+</div>
+
+</section>
+
+<!-- TEXTILE BASICS -->
+<section id="basics" class="page">
+
+<div class="card">
+<h1>Textile Basics</h1>
+
+<h3>1. Fiber (আঁশ)</h3>
+<p>
+Fiber হলো সুতা তৈরির মৌলিক কাঁচামাল।
+উদাহরণ: Cotton, Polyester, Viscose, Wool ও Nylon।
+</p>
+
+<h3>2. Yarn (সুতা)</h3>
+<p>
+Fiber থেকে Spinning প্রক্রিয়ায় Yarn তৈরি করা হয়।
+Yarn দুই ধরনের: Spun Yarn ও Filament Yarn।
+</p>
+
+<h3>3. Fabric (কাপড়)</h3>
+<p>
+Yarn থেকে Weaving অথবা Knitting পদ্ধতিতে Fabric তৈরি হয়।
+</p>
+
+<h3>4. GSM</h3>
+<p>
+GSM-এর পূর্ণরূপ Grams per Square Meter।
+প্রতি বর্গমিটার কাপড়ের ওজনকে GSM বলে।
+</p>
+
+<h3>5. Yarn Count</h3>
+<p>
+Yarn Count দিয়ে সুতার মোটা বা চিকন হওয়ার পরিমাপ বোঝানো হয়।
+উদাহরণ: Ne, Tex ও Denier।
+</p>
+
+</div>
+
+<div class="card">
+<h2>Common Textile Terms</h2>
+
+<table>
+<tr><th>Term</th><th>অর্থ</th></tr>
+<tr><td>Warp</td><td>লম্বালম্বি সুতা</td></tr>
+<tr><td>Weft</td><td>আড়াআড়ি সুতা</td></tr>
+<tr><td>Selvedge</td><td>কাপড়ের দুই পাশের প্রান্ত</td></tr>
+<tr><td>Blend</td><td>একাধিক Fiber-এর মিশ্রণ</td></tr>
+<tr><td>Lot</td><td>উৎপাদন বা প্রসেসের নির্দিষ্ট ব্যাচ</td></tr>
+<tr><td>Shade</td><td>রঙের ধরন বা গভীরতা</td></tr>
+</table>
+</div>
+
+</section>
+
+
+<!-- WOVEN FABRIC A-Z -->
+<section id="woven" class="page">
+
+<div class="card">
+<h1>Woven Fabric A-Z</h1>
+
+<p>
+Warp ও Weft yarn পরস্পরের সঙ্গে নির্দিষ্ট নিয়মে
+Interlacement করে Woven Fabric তৈরি হয়।
+</p>
+
+<h3>Warp</h3>
+<p>
+Loom-এ দৈর্ঘ্য বরাবর থাকা সুতা হলো Warp।
+</p>
+
+<h3>Weft</h3>
+<p>
+Loom-এ প্রস্থ বরাবর প্রবেশ করা সুতা হলো Weft।
+</p>
+
+<h3>EPI</h3>
+<p>
+Ends Per Inch। প্রতি ইঞ্চিতে Warp yarn-এর সংখ্যা।
+</p>
+
+<h3>PPI</h3>
+<p>
+Picks Per Inch। প্রতি ইঞ্চিতে Weft yarn-এর সংখ্যা।
+</p>
+</div>
+
+<div class="card">
+<h2>Three Basic Weaves</h2>
+
+<h3>1. Plain Weave</h3>
+<p>
+একটি Warp yarn একটি Weft-এর উপর এবং
+পরের Weft-এর নিচ দিয়ে যায়।
+</p>
+
+<h3>2. Twill Weave</h3>
+<p>
+কাপড়ে তির্যক বা Diagonal রেখা তৈরি হয়।
+উদাহরণ: Denim Fabric।
+</p>
+
+<h3>3. Satin Weave</h3>
+<p>
+দীর্ঘ Float থাকার কারণে কাপড়ের Surface
+তুলনামূলক মসৃণ ও চকচকে হয়।
+</p>
+</div>
+
+<div class="card">
+<h2>Common Woven Fabrics</h2>
+
+<ul>
+<li>Poplin</li>
+<li>Twill</li>
+<li>Drill</li>
+<li>Canvas</li>
+<li>Denim</li>
+<li>Oxford</li>
+<li>Sateen</li>
+<li>Voile</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Woven Fabric Inspection</h2>
+
+<ul>
+<li>Broken End</li>
+<li>Broken Pick</li>
+<li>Hole</li>
+<li>Slub</li>
+<li>Thick Place</li>
+<li>Thin Place</li>
+<li>Oil Stain</li>
+<li>Shade Variation</li>
+<li>Fabric Width</li>
+<li>GSM</li>
+</ul>
+</div>
+
+</section>
+
+<!-- WET PROCESSING -->
+<section id="wet" class="page">
+
+<div class="card">
+<h1>Wet Processing</h1>
+
+<p>
+পানির মাধ্যমে Textile Material-এর উপর বিভিন্ন
+Chemical ও Dye প্রয়োগ করে প্রয়োজনীয় বৈশিষ্ট্য
+তৈরি করার প্রক্রিয়াকে Wet Processing বলে।
+</p>
+
+<h2>Wet Processing Flow Chart</h2>
+
+<p>
+Grey Fabric → Pretreatment → Dyeing / Printing
+→ After Treatment → Finishing → Inspection
+</p>
+
+<h2>Pretreatment Process</h2>
+
+<h3>1. Desizing</h3>
+<p>Warp sizing agent দূর করার প্রক্রিয়া।</p>
+
+<h3>2. Scouring</h3>
+<p>
+Cotton Fabric থেকে Wax, Oil, Pectin ও ময়লা দূর করা হয়।
+</p>
+
+<h3>3. Bleaching</h3>
+<p>
+Fabric-এর Natural Colour দূর করে Whiteness বৃদ্ধি করা হয়।
+</p>
+
+<h3>4. Mercerizing</h3>
+<p>
+Cotton Fabric-এর Lustre, Strength ও Dye Affinity উন্নত করা হয়।
+</p>
+</div>
+
+<div class="card">
+<h2>WTP - Water Treatment Plant</h2>
+
+<p>
+কারখানার বিভিন্ন প্রসেসের উপযোগী পানি প্রস্তুত করা হয়।
+</p>
+
+<ul>
+<li>Raw Water Collection</li>
+<li>Sand / Multimedia Filtration</li>
+<li>Activated Carbon Treatment</li>
+<li>Softening / প্রয়োজনীয় Treatment</li>
+<li>Water Storage and Supply</li>
+</ul>
+
+<p class="muted">
+প্ল্যান্টের ডিজাইন অনুযায়ী Treatment ধাপ পরিবর্তিত হতে পারে।
+</p>
+</div>
+
+<div class="card">
+<h2>ETP - Effluent Treatment Plant</h2>
+
+<p>
+কারখানার ব্যবহৃত বর্জ্য পানি পরিশোধনের ব্যবস্থা।
+</p>
+
+<ul>
+<li>Screening</li>
+<li>Equalization</li>
+<li>pH Adjustment</li>
+<li>Coagulation</li>
+<li>Flocculation</li>
+<li>Biological Treatment</li>
+<li>Clarification</li>
+<li>Sludge Handling</li>
+</ul>
+
+<h3>Important Parameters</h3>
+<p>DO, BOD, COD, pH ও TDS।</p>
+</div>
+
+</section>
+
+
+<!-- DYEING -->
+<section id="dyeing" class="page">
+
+<div class="card">
+<h1>Dyeing</h1>
+
+<p>
+Textile Material-এ নির্দিষ্ট রং প্রয়োগ করে
+কাঙ্ক্ষিত Shade তৈরি করার প্রক্রিয়াকে Dyeing বলে।
+</p>
+
+<h2>Cotton Dyeing</h2>
+
+<p>
+Cotton Fabric-এ সাধারণত Reactive Dye ব্যবহার করা হয়।
+</p>
+
+<h3>Basic Process</h3>
+<ul>
+<li>Fabric Preparation</li>
+<li>Dye Addition</li>
+<li>Salt Addition</li>
+<li>Alkali / Soda Addition</li>
+<li>Fixation</li>
+<li>Rinsing</li>
+<li>Soaping</li>
+<li>Neutralization</li>
+</ul>
+
+<h2>Polyester Dyeing</h2>
+
+<p>
+Polyester Fabric-এ সাধারণত Disperse Dye ব্যবহার করা হয়।
+</p>
+
+<h3>Basic Process</h3>
+<ul>
+<li>Fabric Preparation</li>
+<li>Dye Bath Preparation</li>
+<li>Disperse Dye Addition</li>
+<li>Temperature Raising</li>
+<li>High Temperature Dyeing</li>
+<li>Cooling</li>
+<li>Reduction Clearing (প্রয়োজন অনুযায়ী)</li>
+<li>After Treatment</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Dyeing Machines</h2>
+
+<h3>1. Jet Machine</h3>
+<p>Rope Form Fabric Dyeing-এর জন্য ব্যবহৃত হয়।</p>
+
+<h3>2. Soft Flow Machine</h3>
+<p>
+Fabric ও Dye Liquor-এর চলাচলের মাধ্যমে Dyeing করা হয়।
+</p>
+
+<h3>3. Jigger Machine</h3>
+<p>
+Woven Fabric Open Width অবস্থায় Dyeing করা হয়।
+</p>
+
+<h3>4. Winch Machine</h3>
+<p>Rope Form Fabric Dyeing করা হয়।</p>
+
+<h3>5. Padding Mangle</h3>
+<p>
+Fabric-কে Dye Liquor-এর মধ্য দিয়ে নিয়ে Nip Roller
+দিয়ে নির্দিষ্ট Liquor Pickup দেওয়া হয়।
+</p>
+</div>
+
+<div class="card">
+<h2>Important Dyeing Parameters</h2>
+
+<ul>
+<li>Shade Percentage</li>
+<li>Material to Liquor Ratio (M:L)</li>
+<li>Temperature</li>
+<li>Time</li>
+<li>pH</li>
+<li>RPM</li>
+<li>Salt and Soda</li>
+<li>Chemical Dosing</li>
+</ul>
+
+</div>
+
+</section>
+
+
+<!-- FINISHING -->
+<section id="finishing" class="page">
+
+<div class="card">
+<h1>Textile Finishing</h1>
+
+<p>
+Fabric-এর Appearance, Handle, Width ও
+Dimensional Stability উন্নত করার প্রক্রিয়া হলো Finishing।
+</p>
+
+<h2>Common Finishing Machines</h2>
+
+<h3>1. Stenter Machine</h3>
+<p>
+Fabric-এর Width নিয়ন্ত্রণ ও Heat Setting / Drying-এর
+জন্য ব্যবহৃত হয়।
+</p>
+
+<h3>2. Dryer Machine</h3>
+<p>Fabric-এর Moisture কমানোর জন্য ব্যবহৃত হয়।</p>
+
+<h3>3. Compactor Machine</h3>
+<p>
+Knit Fabric-এর Shrinkage ও Dimensional Stability
+নিয়ন্ত্রণে ব্যবহৃত হয়।
+</p>
+
+<h3>4. Calendaring Machine</h3>
+<p>
+Roller Pressure ও Heat প্রয়োগ করে Fabric Surface
+এর Appearance পরিবর্তন করা হয়।
+</p>
+</div>
+
+<div class="card">
+<h2>Softener</h2>
+
+<p>
+Fabric-এর Softness ও Handle উন্নত করার জন্য
+Softener ব্যবহার করা হয়।
+</p>
+
+<h3>Silicone Softener</h3>
+<p>
+Fabric-এ Smooth Handle ও Softness দিতে ব্যবহৃত হয়।
+</p>
+
+<h3>Quality Inspection</h3>
+<ul>
+<li>Hole</li>
+<li>Oil Stain</li>
+<li>Crease Mark</li>
+<li>Shade Variation</li>
+<li>Needle Line</li>
+<li>Fabric Width</li>
+<li>GSM</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Four Point System</h2>
+
+<p>
+Woven Fabric Inspection-এ Defect-এর দৈর্ঘ্য অনুযায়ী
+Penalty Point দেওয়া হয়।
+</p>
+
+<table>
+<tr><th>Defect Length</th><th>Points</th></tr>
+<tr><td>Up to 3 inches</td><td>1 Point</td></tr>
+<tr><td>3 to 6 inches</td><td>2 Points</td></tr>
+<tr><td>6 to 9 inches</td><td>3 Points</td></tr>
+<tr><td>Above 9 inches</td><td>4 Points</td></tr>
+</table>
+
+<p class="muted">
+সুনির্দিষ্ট Inspection Standard ও Buyer Requirement অনুসরণ করতে হবে।
+</p>
+</div>
+
+</section>
+
+<!-- CALCULATION -->
+<section id="calculation" class="page">
+
+<div class="card">
+<h1>Textile Calculation</h1>
+
+<h2>1. Dye Quantity Calculator</h2>
+
+<label>Fabric Weight (kg)</label>
+<input type="number" id="fabric" placeholder="যেমন 100">
+
+<label>Shade (%)</label>
+<input type="number" id="shade" placeholder="যেমন 3">
+
+<button class="action" onclick="dyeCalc()">
+Calculate
+</button>
+
+<div id="dyeResult" class="result" hidden></div>
+</div>
+
+<div class="card">
+<h2>2. Water Quantity Calculator</h2>
+
+<label>Fabric Weight (kg)</label>
+<input type="number" id="weight" placeholder="যেমন 100">
+
+<label>M:L Ratio (যেমন 1:10 হলে 10 লিখুন)</label>
+<input type="number" id="ml" placeholder="10">
+
+<button class="action" onclick="waterCalc()">
+Calculate
+</button>
+
+<div id="waterResult" class="result" hidden></div>
+</div>
+
+<div class="card">
+<h2>3. GSM Calculation</h2>
+
+<p>
+GSM = Sample Weight (g) × 10,000
+÷ Sample Area (cm²)
+</p>
+
+<p>
+উদাহরণ: 100 cm² Sample-এর ওজন 1.8 g হলে
+GSM = 180।
+</p>
+</div>
+
+<div class="card">
+<h2>4. Chemical Quantity</h2>
+
+<p>
+Chemical Quantity (kg) =
+Fabric Weight (kg) × Chemical Percentage ÷ 100
+</p>
+
+<p>
+উদাহরণ: 100 kg Fabric-এর জন্য 2% Chemical হলে
+প্রয়োজন 2 kg।
+</p>
+
+</div>
+</section>
+
+
+<!-- MCQ TEST -->
+<section id="mcq" class="page">
+
+<div class="card">
+<h1>Textile MCQ Test</h1>
+
+<p>সঠিক উত্তর নির্বাচন করুন।</p>
+
+<form id="quiz">
+
+<div class="question">
+<b>1. Woven Fabric তৈরি হয় কোন দুটি Yarn দিয়ে?</b>
+<label><input type="radio" name="q1" value="a"> Warp ও Weft</label>
+<label><input type="radio" name="q1" value="b"> Course ও Wale</label>
+<label><input type="radio" name="q1" value="c"> Fiber ও Sliver</label>
+</div>
+
+<div class="question">
+<b>2. Cotton Dyeing-এ সাধারণত কোন Dye ব্যবহৃত হয়?</b>
+<label><input type="radio" name="q2" value="a"> Disperse</label>
+<label><input type="radio" name="q2" value="b"> Reactive</label>
+<label><input type="radio" name="q2" value="c"> Vat</label>
+</div>
+
+<div class="question">
+<b>3. Polyester Dyeing-এ কোন Dye ব্যবহৃত হয়?</b>
+<label><input type="radio" name="q3" value="a"> Direct</label>
+<label><input type="radio" name="q3" value="b"> Reactive</label>
+<label><input type="radio" name="q3" value="c"> Disperse</label>
+</div>
+
+<div class="question">
+<b>4. GSM-এর পূর্ণরূপ কী?</b>
+<label><input type="radio" name="q4" value="a"> Gram per Square Meter</label>
+<label><input type="radio" name="q4" value="b"> General Standard Machine</label>
+<label><input type="radio" name="q4" value="c"> Garments Sewing Method</label>
+</div>
+
+<div class="question">
+<b>5. ETP-এর কাজ কী?</b>
+<label><input type="radio" name="q5" value="a"> সুতা তৈরি</label>
+<label><input type="radio" name="q5" value="b"> বর্জ্য পানি পরিশোধন</label>
+<label><input type="radio" name="q5" value="c"> কাপড় বুনন</label>
+</div>
+
+<button type="button" class="action" onclick="checkQuiz()">
+Submit Answer
+</button>
+
+<div id="quizResult" class="result" hidden></div>
+
+</form>
+</div>
+</section>
+
+</main>
+
+<footer>
+Textile Master | Textile Engineering Learning Platform
+</footer>
+
+
+<!-- JAVASCRIPT -->
+<script>
+
+// MENU SYSTEM
+const navButtons = document.querySelectorAll("nav button");
+
+navButtons.forEach(button => {
+  button.addEventListener("click", () => {
+
+    navButtons.forEach(b => b.classList.remove("active"));
+    button.classList.add("active");
+
+    document.querySelectorAll(".page").forEach(page => {
+      page.classList.remove("active");
+    });
+
+    document.getElementById(button.dataset.page)
+      .classList.add("active");
+
+    window.scrollTo({top: 0, behavior: "smooth"});
+  });
+});
+
+
+// DYE CALCULATION
+function dyeCalc() {
+
+  const weight = Number(document.getElementById("fabric").value);
+  const shade = Number(document.getElementById("shade").value);
+
+  const result = document.getElementById("dyeResult");
+
+  if (weight <= 0 || shade < 0) {
+    result.hidden = false;
+    result.textContent = "সঠিক Fabric Weight ও Shade লিখুন।";
+    return;
+  }
+
+  const dye = weight * shade / 100;
+
+  result.hidden = false;
+  result.textContent =
+    "Required Dye = " + dye.toFixed(3) + " kg";
+}
+
+
+// WATER CALCULATION
+function waterCalc() {
+
+  const weight = Number(document.getElementById("weight").value);
+  const ml = Number(document.getElementById("ml").value);
+
+  const result = document.getElementById("waterResult");
+
+  if (weight <= 0 || ml <= 0) {
+    result.hidden = false;
+    result.textContent = "সঠিক Weight ও M:L Ratio লিখুন।";
+    return;
+  }
+
+  const water = weight * ml;
+
+  result.hidden = false;
+  result.textContent =
+    "Required Water = " + water.toFixed(2) + " Liter";
+}
+
+
+// MCQ ANSWER CHECK
+function checkQuiz() {
+
+  const answers = {
+    q1: "a",
+    q2: "b",
+    q3: "c",
+    q4: "a",
+    q5: "b"
+  };
+
+  let score = 0;
+
+  for (const q in answers) {
+
+    const selected =
+      document.querySelector('input[name="' + q + '"]:checked');
+
+    if (selected && selected.value === answers[q]) {
+      score++;
+    }
+  }
+
+  const result = document.getElementById("quizResult");
+
+  result.hidden = false;
+  result.textContent =
+    "Your Result: " + score + " / 5";
+}
+
+</script>
+
+</body>
+</html>
