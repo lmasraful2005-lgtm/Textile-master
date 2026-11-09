@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Textile Master</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f2f5f5;margin:0;color:#222}
+header{background:#075b50;color:white;padding:25px;text-align:center}
+main{padding:18px;max-width:750px;margin:auto}
+section{background:white;padding:16px;margin:15px 0;border-radius:12px}
+h2{color:#075b50}
+button{background:#075b50;color:white;border:0;padding:12px;border-radius:8px}
+</style>
+</head>
+<body>
+<header>
+<h1>Textile Master</h1>
+<p>Textile Engineering Learning App</p>
+</header>
+<main>
+<section>
+<h2>Welcome to Textile Master</h2>
+<p>টেক্সটাইল ইঞ্জিনিয়ারিং শেখার সহজ বাংলা ও ইংরেজি প্ল্যাটফর্ম।</p>
+</section>
+<section>
+<h2>Woven Fabric</h2>
+<p>Woven fabric is made by interlacing warp and weft yarns.</p>
+<p>ওয়ার্প ও ওয়েফট সুতা পরস্পর আড়াআড়িভাবে মিলিত হয়ে Woven Fabric তৈরি করে।</p>
+</section>
+<section>
+<h2>Wet Processing</h2>
+<p>Pretreatment → Dyeing → After Treatment → Finishing</p>
+</section>
+<section>
+<h2>Textile Testing</h2>
+<p>GSM, Colour Fastness, Pilling, Shrinkage এবং অন্যান্য পরীক্ষা।</p>
+</section>
+</main>
+</body>
+</html>
